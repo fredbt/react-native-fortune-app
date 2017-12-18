@@ -1,8 +1,8 @@
 // a library to wrap and simplify api calls
 import apisauce from 'apisauce'
+import Secrets from 'react-native-config'
 
-// our "constructor"
-const create = (baseURL = 'http://ef6087ae.ngrok.io') => {
+const create = (baseURL = Secrets.API_URL) => {
   const api = apisauce.create({
     // base URL is read from the "constructor"
     baseURL,
